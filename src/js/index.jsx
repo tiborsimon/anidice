@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+document.body.requestFullscreen()
 
 const STATE_PICK = 'pick'
 const STATE_ANIMATE = 'animate'
