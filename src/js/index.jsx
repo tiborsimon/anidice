@@ -1,7 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-document.body.requestFullscreen()
+window.addEventListener("load",function() {
+  setTimeout(function(){
+      window.scrollTo(0, 1);
+  }, 0);
+});
 
 const STATE_PICK = 'pick'
 const STATE_ANIMATE = 'animate'
