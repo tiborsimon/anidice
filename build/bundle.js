@@ -969,258 +969,175 @@ var STATE_ANIMATE = 'animate';
 
 var TYPE_COUNT = 8;
 
-var Meerkat = function (_React$Component) {
-  _inherits(Meerkat, _React$Component);
+var RightHand = function (_React$Component) {
+  _inherits(RightHand, _React$Component);
 
-  function Meerkat() {
-    _classCallCheck(this, Meerkat);
+  function RightHand() {
+    _classCallCheck(this, RightHand);
 
-    return _possibleConstructorReturn(this, (Meerkat.__proto__ || Object.getPrototypeOf(Meerkat)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (RightHand.__proto__ || Object.getPrototypeOf(RightHand)).apply(this, arguments));
   }
 
-  _createClass(Meerkat, [{
+  _createClass(RightHand, [{
     key: "render",
     value: function render() {
-      return _react2.default.createElement("div", { className: "scene meerkat", onClick: this.props.reset });
-    }
-  }]);
-
-  return Meerkat;
-}(_react2.default.Component);
-
-var BirdItem = function (_React$Component2) {
-  _inherits(BirdItem, _React$Component2);
-
-  function BirdItem() {
-    _classCallCheck(this, BirdItem);
-
-    return _possibleConstructorReturn(this, (BirdItem.__proto__ || Object.getPrototypeOf(BirdItem)).apply(this, arguments));
-  }
-
-  _createClass(BirdItem, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "div",
-        { style: this.props.style, className: "bird" },
-        _react2.default.createElement("div", { className: "beak" }),
-        _react2.default.createElement("div", { className: "body-top" }),
-        _react2.default.createElement("div", { className: "body-bottom" }),
-        _react2.default.createElement("div", { className: "tail" }),
-        _react2.default.createElement(
-          "div",
-          { className: "wing-right" },
-          _react2.default.createElement("div", { className: "part1" }),
-          _react2.default.createElement("div", { className: "part2" })
-        ),
-        _react2.default.createElement(
-          "div",
-          { className: "wing-left" },
-          _react2.default.createElement("div", { className: "part1" }),
-          _react2.default.createElement("div", { className: "part2" })
-        )
-      );
-    }
-  }]);
-
-  return BirdItem;
-}(_react2.default.Component);
-
-var Bird = function (_React$Component3) {
-  _inherits(Bird, _React$Component3);
-
-  function Bird() {
-    _classCallCheck(this, Bird);
-
-    return _possibleConstructorReturn(this, (Bird.__proto__ || Object.getPrototypeOf(Bird)).apply(this, arguments));
-  }
-
-  _createClass(Bird, [{
-    key: "render",
-    value: function render() {
-      var count = this.props.number;
-      switch (count) {
+      var number = this.props.number;
+      switch (number) {
         case 1:
           return _react2.default.createElement(
             "div",
-            { className: "scene bird", onClick: this.props.reset },
-            _react2.default.createElement(
-              "div",
-              { className: "birds" },
-              _react2.default.createElement(BirdItem, null)
-            )
+            { id: "right_hand" },
+            _react2.default.createElement("div", { "class": "finger1 on" }),
+            _react2.default.createElement("div", { "class": "finger2" }),
+            _react2.default.createElement("div", { "class": "finger3" }),
+            _react2.default.createElement("div", { "class": "finger4" }),
+            _react2.default.createElement("div", { id: "paw_print" })
           );
         case 2:
           return _react2.default.createElement(
             "div",
-            { className: "scene bird", onClick: this.props.reset },
-            _react2.default.createElement(
-              "div",
-              { className: "birds" },
-              _react2.default.createElement(BirdItem, null),
-              _react2.default.createElement(BirdItem, { style: { top: '41px', left: '66px' } })
-            )
+            { id: "right_hand" },
+            _react2.default.createElement("div", { "class": "finger1 on" }),
+            _react2.default.createElement("div", { "class": "finger2 on" }),
+            _react2.default.createElement("div", { "class": "finger3" }),
+            _react2.default.createElement("div", { "class": "finger4" }),
+            _react2.default.createElement("div", { id: "paw_print" })
           );
         case 3:
           return _react2.default.createElement(
             "div",
-            { className: "scene bird", onClick: this.props.reset },
-            _react2.default.createElement(
-              "div",
-              { className: "birds" },
-              _react2.default.createElement(BirdItem, null),
-              _react2.default.createElement(BirdItem, { style: { top: '41px', left: '66px' } }),
-              _react2.default.createElement(BirdItem, { style: { top: '61px', left: '-41px' } })
-            )
+            { id: "right_hand" },
+            _react2.default.createElement("div", { "class": "finger1 on" }),
+            _react2.default.createElement("div", { "class": "finger2 on" }),
+            _react2.default.createElement("div", { "class": "finger3 on" }),
+            _react2.default.createElement("div", { "class": "finger4" }),
+            _react2.default.createElement("div", { id: "paw_print" })
           );
         case 4:
           return _react2.default.createElement(
             "div",
-            { className: "scene bird", onClick: this.props.reset },
-            _react2.default.createElement(
-              "div",
-              { className: "birds" },
-              _react2.default.createElement(BirdItem, null),
-              _react2.default.createElement(BirdItem, { style: { top: '41px', left: '66px' } }),
-              _react2.default.createElement(BirdItem, { style: { top: '61px', left: '-41px' } }),
-              _react2.default.createElement(BirdItem, { style: { top: '93px', left: '133px' } })
-            )
+            { id: "right_hand" },
+            _react2.default.createElement("div", { "class": "finger1 on" }),
+            _react2.default.createElement("div", { "class": "finger2 on" }),
+            _react2.default.createElement("div", { "class": "finger3 on" }),
+            _react2.default.createElement("div", { "class": "finger4 on" }),
+            _react2.default.createElement("div", { id: "paw_print" })
           );
       }
     }
   }]);
 
-  return Bird;
+  return RightHand;
 }(_react2.default.Component);
 
-var Duck = function (_React$Component4) {
-  _inherits(Duck, _React$Component4);
+var Loris = function (_React$Component2) {
+  _inherits(Loris, _React$Component2);
 
-  function Duck() {
-    _classCallCheck(this, Duck);
+  function Loris() {
+    _classCallCheck(this, Loris);
 
-    return _possibleConstructorReturn(this, (Duck.__proto__ || Object.getPrototypeOf(Duck)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Loris.__proto__ || Object.getPrototypeOf(Loris)).apply(this, arguments));
   }
 
-  _createClass(Duck, [{
+  _createClass(Loris, [{
     key: "render",
     value: function render() {
-      return _react2.default.createElement("div", { className: "scene duck", onClick: this.props.reset });
+      return _react2.default.createElement(
+        "div",
+        { className: "scene", onClick: this.props.reset },
+        _react2.default.createElement(
+          "div",
+          { id: "lori_body" },
+          _react2.default.createElement(RightHand, { number: this.props.number }),
+          _react2.default.createElement(
+            "div",
+            { id: "paw_print" },
+            _react2.default.createElement("div", { id: "fingers" })
+          ),
+          _react2.default.createElement("div", { id: "left_hand" }),
+          _react2.default.createElement(
+            "div",
+            { id: "right_leg" },
+            _react2.default.createElement(
+              "div",
+              { id: "paw_print" },
+              _react2.default.createElement("div", { id: "fingers" })
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { id: "left_leg" },
+            _react2.default.createElement(
+              "div",
+              { id: "paw_print" },
+              _react2.default.createElement("div", { id: "fingers" })
+            )
+          ),
+          _react2.default.createElement("div", { id: "left_ear" }),
+          _react2.default.createElement("div", { id: "right_ear" }),
+          _react2.default.createElement("div", { id: "head_under" }),
+          _react2.default.createElement(
+            "div",
+            { id: "head" },
+            _react2.default.createElement("div", { id: "nose" }),
+            _react2.default.createElement(
+              "div",
+              { id: "left_eye_background" },
+              _react2.default.createElement("div", { id: "gradient" }),
+              _react2.default.createElement(
+                "div",
+                { id: "left_eye", align: "center" },
+                _react2.default.createElement(
+                  "div",
+                  { id: "cloud_holder" },
+                  _react2.default.createElement("div", { id: "radial" }),
+                  _react2.default.createElement("div", { "class": "cloud" })
+                ),
+                _react2.default.createElement("div", { id: "pupil_glimps2" }),
+                _react2.default.createElement("div", { id: "pupil_glimps" }),
+                _react2.default.createElement("div", { id: "pupil" })
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { id: "right_eye_background" },
+              _react2.default.createElement(
+                "div",
+                { id: "right_eye", align: "center" },
+                _react2.default.createElement(
+                  "div",
+                  { id: "cloud_holder" },
+                  _react2.default.createElement("div", { id: "radial" }),
+                  _react2.default.createElement("div", { "class": "cloud" })
+                ),
+                _react2.default.createElement("div", { id: "pupil_glimps2" }),
+                _react2.default.createElement("div", { id: "pupil_glimps" }),
+                _react2.default.createElement("div", { id: "pupil" })
+              )
+            )
+          )
+        )
+      );
     }
   }]);
 
-  return Duck;
+  return Loris;
 }(_react2.default.Component);
 
-var Scarabeus = function (_React$Component5) {
-  _inherits(Scarabeus, _React$Component5);
-
-  function Scarabeus() {
-    _classCallCheck(this, Scarabeus);
-
-    return _possibleConstructorReturn(this, (Scarabeus.__proto__ || Object.getPrototypeOf(Scarabeus)).apply(this, arguments));
-  }
-
-  _createClass(Scarabeus, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement("div", { className: "scene scarabeus", onClick: this.props.reset });
-    }
-  }]);
-
-  return Scarabeus;
-}(_react2.default.Component);
-
-var Chameleon = function (_React$Component6) {
-  _inherits(Chameleon, _React$Component6);
-
-  function Chameleon() {
-    _classCallCheck(this, Chameleon);
-
-    return _possibleConstructorReturn(this, (Chameleon.__proto__ || Object.getPrototypeOf(Chameleon)).apply(this, arguments));
-  }
-
-  _createClass(Chameleon, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement("div", { className: "scene chameleon", onClick: this.props.reset });
-    }
-  }]);
-
-  return Chameleon;
-}(_react2.default.Component);
-
-var Penguin = function (_React$Component7) {
-  _inherits(Penguin, _React$Component7);
-
-  function Penguin() {
-    _classCallCheck(this, Penguin);
-
-    return _possibleConstructorReturn(this, (Penguin.__proto__ || Object.getPrototypeOf(Penguin)).apply(this, arguments));
-  }
-
-  _createClass(Penguin, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement("div", { className: "scene penguin", onClick: this.props.reset });
-    }
-  }]);
-
-  return Penguin;
-}(_react2.default.Component);
-
-var Fly = function (_React$Component8) {
-  _inherits(Fly, _React$Component8);
-
-  function Fly() {
-    _classCallCheck(this, Fly);
-
-    return _possibleConstructorReturn(this, (Fly.__proto__ || Object.getPrototypeOf(Fly)).apply(this, arguments));
-  }
-
-  _createClass(Fly, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement("div", { className: "scene fly", onClick: this.props.reset });
-    }
-  }]);
-
-  return Fly;
-}(_react2.default.Component);
-
-var Bee = function (_React$Component9) {
-  _inherits(Bee, _React$Component9);
-
-  function Bee() {
-    _classCallCheck(this, Bee);
-
-    return _possibleConstructorReturn(this, (Bee.__proto__ || Object.getPrototypeOf(Bee)).apply(this, arguments));
-  }
-
-  _createClass(Bee, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement("div", { className: "scene bee", onClick: this.props.reset });
-    }
-  }]);
-
-  return Bee;
-}(_react2.default.Component);
-
-var Dice = function (_React$Component10) {
-  _inherits(Dice, _React$Component10);
+var Dice = function (_React$Component3) {
+  _inherits(Dice, _React$Component3);
 
   function Dice(props) {
     _classCallCheck(this, Dice);
 
-    var _this10 = _possibleConstructorReturn(this, (Dice.__proto__ || Object.getPrototypeOf(Dice)).call(this, props));
+    var _this3 = _possibleConstructorReturn(this, (Dice.__proto__ || Object.getPrototypeOf(Dice)).call(this, props));
 
-    _this10.state = {
+    _this3.state = {
       state: STATE_PICK,
       max: 4,
       type: 0
     };
-    return _this10;
+    return _this3;
   }
 
   _createClass(Dice, [{
@@ -1244,25 +1161,7 @@ var Dice = function (_React$Component10) {
         );
       } else {
         var number = this.state.number;
-        var type = this.state.type;
-        switch (type) {
-          case 0:
-            return _react2.default.createElement(Meerkat, { number: number, reset: this.reset.bind(this) });
-          case 1:
-            return _react2.default.createElement(Bird, { number: number, reset: this.reset.bind(this) });
-          case 2:
-            return _react2.default.createElement(Duck, { number: number, reset: this.reset.bind(this) });
-          case 3:
-            return _react2.default.createElement(Scarabeus, { number: number, reset: this.reset.bind(this) });
-          case 4:
-            return _react2.default.createElement(Chameleon, { number: number, reset: this.reset.bind(this) });
-          case 5:
-            return _react2.default.createElement(Penguin, { number: number, reset: this.reset.bind(this) });
-          case 6:
-            return _react2.default.createElement(Fly, { number: number, reset: this.reset.bind(this) });
-          case 7:
-            return _react2.default.createElement(Bee, { number: number, reset: this.reset.bind(this) });
-        }
+        return _react2.default.createElement(Loris, { number: number, reset: this.reset.bind(this) });
       }
     }
   }, {
