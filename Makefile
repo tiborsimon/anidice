@@ -63,6 +63,8 @@ publish: build
 	mkdir -p docs
 	touch docs/.nojekyll
 	cp build/index.html docs/index.html
+	git commit -am "App published."
+	git push
 
 
 .PHONY: init build dev prod
