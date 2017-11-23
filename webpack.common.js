@@ -17,26 +17,18 @@ module.exports = {
         query: {
           presets: ['env', 'react']
         }
-      },
-      {
-        test: /\.scss$/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader']
-      },
-			{
-				test: /\.css$/,
-				use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
-			}
+      }
 		]
   },
 	plugins: [
 		new HtmlWebpackPlugin({
       template: './src/index.html',
-			inlineSource: '.(js|css)$'
+			inlineSource: 'js$'
 		}),
 		new HtmlWebpackInlineSourcePlugin()
 	],
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'build')
   }
 };

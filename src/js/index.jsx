@@ -1,7 +1,3 @@
-require('../sass/index.scss');
-import 'normalize.css';
-
-
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -12,37 +8,28 @@ const STATE_ANIMATE = 'animate'
 const TYPE_COUNT = 8
 
 
-class Meerkats extends React.Component {
+class Meerkat extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Meerkats</h1>
-        <h3>{ this.props.number }</h3>
-        <button onClick={ this.props.reset }>RESET</button>
+      <div className="scene meerkat" onClick={ this.props.reset }>
       </div>
     )
   }
 }
 
-class Birds extends React.Component {
+class Bird extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Birds</h1>
-        <h3>{ this.props.number }</h3>
-        <button onClick={ this.props.reset }>RESET</button>
+      <div className="scene bird" onClick={ this.props.reset }>
       </div>
     )
   }
 }
 
-class Ducks extends React.Component {
+class Duck extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Ducks</h1>
-        <h3>{ this.props.number }</h3>
-        <button onClick={ this.props.reset }>RESET</button>
+      <div className="scene duck" onClick={ this.props.reset }>
       </div>
     )
   }
@@ -51,10 +38,7 @@ class Ducks extends React.Component {
 class Scarabeus extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Scarabeus</h1>
-        <h3>{ this.props.number }</h3>
-        <button onClick={ this.props.reset }>RESET</button>
+      <div className="scene scarabeus" onClick={ this.props.reset }>
       </div>
     )
   }
@@ -63,46 +47,34 @@ class Scarabeus extends React.Component {
 class Chameleon extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Chameleon</h1>
-        <h3>{ this.props.number }</h3>
-        <button onClick={ this.props.reset }>RESET</button>
+      <div className="scene chameleon" onClick={ this.props.reset }>
       </div>
     )
   }
 }
 
-class Penguins extends React.Component {
+class Penguin extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Penguins</h1>
-        <h3>{ this.props.number }</h3>
-        <button onClick={ this.props.reset }>RESET</button>
+      <div className="scene penguin" onClick={ this.props.reset }>
       </div>
     )
   }
 }
 
-class Flies extends React.Component {
+class Fly extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Flies</h1>
-        <h3>{ this.props.number }</h3>
-        <button onClick={ this.props.reset }>RESET</button>
+      <div className="scene fly" onClick={ this.props.reset }>
       </div>
     )
   }
 }
 
-class Bees extends React.Component {
+class Bee extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Bees</h1>
-        <h3>{ this.props.number }</h3>
-        <button onClick={ this.props.reset }>RESET</button>
+      <div className="scene bee" onClick={ this.props.reset }>
       </div>
     )
   }
@@ -134,21 +106,21 @@ class Dice extends React.Component {
       const type = this.state.type
       switch (type) {
         case 0:
-          return <Meerkats number={ number } reset={ this.reset.bind(this) } />
+          return <Meerkat number={ number } reset={ this.reset.bind(this) } />
         case 1:
-          return <Birds number={ number } reset={ this.reset.bind(this) } />
+          return <Bird number={ number } reset={ this.reset.bind(this) } />
         case 2:
-          return <Ducks number={ number } reset={ this.reset.bind(this) } />
+          return <Duck number={ number } reset={ this.reset.bind(this) } />
         case 3:
           return <Scarabeus number={ number } reset={ this.reset.bind(this) } />
         case 4:
           return <Chameleon number={ number } reset={ this.reset.bind(this) } />
         case 5:
-          return <Penguins number={ number } reset={ this.reset.bind(this) } />
+          return <Penguin number={ number } reset={ this.reset.bind(this) } />
         case 6:
-          return <Flies number={ number } reset={ this.reset.bind(this) } />
+          return <Fly number={ number } reset={ this.reset.bind(this) } />
         case 7:
-          return <Bees number={ number } reset={ this.reset.bind(this) } />
+          return <Bee number={ number } reset={ this.reset.bind(this) } />
       }
     }
   }
@@ -170,6 +142,7 @@ class Dice extends React.Component {
   pick(max) {
     const number = Math.floor(Math.random() * max) + 1;
     const type = Math.floor(Math.random() * TYPE_COUNT)
+    // const type = 1
     this.setState({
       state: STATE_ANIMATE,
       number,

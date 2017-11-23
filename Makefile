@@ -1,6 +1,9 @@
 NAME := AniDice
 PYTHON := python
 
+OUTPUT:=build
+NODE:=./node_modules/.bin/
+
 help:
 	@echo ""
 	@echo "$(BOLD_NAME) - make interface"
@@ -29,14 +32,29 @@ init:
 	@yarn
 	@echo "$(OK) Environment initialized"
 
-build: dev
+clean:
+	@rm -rfv $(OUTPUT)
+	@mkdir $(OUTPUT)
 
-dev:
+css:
+	@echo "Building final css file.."
+	@{ \
+		cat ./node_modules/normalize.css/normalize.css && \
+		cat ./src/sass/*.scss | $(NODE)node-sass; \
+	} | \
+	$(NODE)postcss --use autoprefixer | \
+	$(NODE)cleancss | \
+	sed "s#/\*.*\*/##g" > $(OUTPUT)/site.min.css
+
+build: dev
+	@cd build; sed -i.bak '/<style>/ r site.min.css' index.html
+
+dev: clean css
 	@echo "$(TASK) Building webpack bundle for development.."
 	@yarn run dev
 	@echo "$(OK) Bundle built"
 
-prod:
+prod: clean css
 	@echo "$(TASK) Building webpack bundle for production.."
 	@yarn run prod
 	@echo "$(OK) Bundle built"
