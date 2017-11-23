@@ -60,8 +60,7 @@ prod: clean css
 	@echo "$(OK) Bundle built"
 
 publish: build
-	@mkdir docs
-	@cp build/index.html docs/index.html
+	@cp build/index.html index.html
 
 
 .PHONY: init build dev prod
