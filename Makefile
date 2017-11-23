@@ -60,7 +60,9 @@ prod: clean css
 	@echo "$(OK) Bundle built"
 
 publish: build
-	@cp build/index.html index.html
+	mkdir -p docs
+	touch docs/.nojekyll
+	cp build/index.html docs/index.html
 
 
 .PHONY: init build dev prod
