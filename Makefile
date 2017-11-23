@@ -59,5 +59,9 @@ prod: clean css
 	@yarn run prod
 	@echo "$(OK) Bundle built"
 
+publish: build
+	@mkdir docs
+	@cp build/index.html docs/index.html
+
 
 .PHONY: init build dev prod
