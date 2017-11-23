@@ -1002,8 +1002,46 @@ var Meerkat = function (_React$Component) {
   return Meerkat;
 }(_react2.default.Component);
 
-var Bird = function (_React$Component2) {
-  _inherits(Bird, _React$Component2);
+var BirdItem = function (_React$Component2) {
+  _inherits(BirdItem, _React$Component2);
+
+  function BirdItem() {
+    _classCallCheck(this, BirdItem);
+
+    return _possibleConstructorReturn(this, (BirdItem.__proto__ || Object.getPrototypeOf(BirdItem)).apply(this, arguments));
+  }
+
+  _createClass(BirdItem, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        { style: this.props.style, className: "bird" },
+        _react2.default.createElement("div", { className: "beak" }),
+        _react2.default.createElement("div", { className: "body-top" }),
+        _react2.default.createElement("div", { className: "body-bottom" }),
+        _react2.default.createElement("div", { className: "tail" }),
+        _react2.default.createElement(
+          "div",
+          { className: "wing-right" },
+          _react2.default.createElement("div", { className: "part1" }),
+          _react2.default.createElement("div", { className: "part2" })
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "wing-left" },
+          _react2.default.createElement("div", { className: "part1" }),
+          _react2.default.createElement("div", { className: "part2" })
+        )
+      );
+    }
+  }]);
+
+  return BirdItem;
+}(_react2.default.Component);
+
+var Bird = function (_React$Component3) {
+  _inherits(Bird, _React$Component3);
 
   function Bird() {
     _classCallCheck(this, Bird);
@@ -1014,15 +1052,63 @@ var Bird = function (_React$Component2) {
   _createClass(Bird, [{
     key: "render",
     value: function render() {
-      return _react2.default.createElement("div", { className: "scene bird", onClick: this.props.reset });
+      var count = this.props.number;
+      switch (count) {
+        case 1:
+          return _react2.default.createElement(
+            "div",
+            { className: "scene bird", onClick: this.props.reset },
+            _react2.default.createElement(
+              "div",
+              { className: "birds" },
+              _react2.default.createElement(BirdItem, null)
+            )
+          );
+        case 2:
+          return _react2.default.createElement(
+            "div",
+            { className: "scene bird", onClick: this.props.reset },
+            _react2.default.createElement(
+              "div",
+              { className: "birds" },
+              _react2.default.createElement(BirdItem, null),
+              _react2.default.createElement(BirdItem, { style: { top: '41px', left: '66px' } })
+            )
+          );
+        case 3:
+          return _react2.default.createElement(
+            "div",
+            { className: "scene bird", onClick: this.props.reset },
+            _react2.default.createElement(
+              "div",
+              { className: "birds" },
+              _react2.default.createElement(BirdItem, null),
+              _react2.default.createElement(BirdItem, { style: { top: '41px', left: '66px' } }),
+              _react2.default.createElement(BirdItem, { style: { top: '61px', left: '-41px' } })
+            )
+          );
+        case 4:
+          return _react2.default.createElement(
+            "div",
+            { className: "scene bird", onClick: this.props.reset },
+            _react2.default.createElement(
+              "div",
+              { className: "birds" },
+              _react2.default.createElement(BirdItem, null),
+              _react2.default.createElement(BirdItem, { style: { top: '41px', left: '66px' } }),
+              _react2.default.createElement(BirdItem, { style: { top: '61px', left: '-41px' } }),
+              _react2.default.createElement(BirdItem, { style: { top: '93px', left: '133px' } })
+            )
+          );
+      }
     }
   }]);
 
   return Bird;
 }(_react2.default.Component);
 
-var Duck = function (_React$Component3) {
-  _inherits(Duck, _React$Component3);
+var Duck = function (_React$Component4) {
+  _inherits(Duck, _React$Component4);
 
   function Duck() {
     _classCallCheck(this, Duck);
@@ -1040,8 +1126,8 @@ var Duck = function (_React$Component3) {
   return Duck;
 }(_react2.default.Component);
 
-var Scarabeus = function (_React$Component4) {
-  _inherits(Scarabeus, _React$Component4);
+var Scarabeus = function (_React$Component5) {
+  _inherits(Scarabeus, _React$Component5);
 
   function Scarabeus() {
     _classCallCheck(this, Scarabeus);
@@ -1059,8 +1145,8 @@ var Scarabeus = function (_React$Component4) {
   return Scarabeus;
 }(_react2.default.Component);
 
-var Chameleon = function (_React$Component5) {
-  _inherits(Chameleon, _React$Component5);
+var Chameleon = function (_React$Component6) {
+  _inherits(Chameleon, _React$Component6);
 
   function Chameleon() {
     _classCallCheck(this, Chameleon);
@@ -1078,8 +1164,8 @@ var Chameleon = function (_React$Component5) {
   return Chameleon;
 }(_react2.default.Component);
 
-var Penguin = function (_React$Component6) {
-  _inherits(Penguin, _React$Component6);
+var Penguin = function (_React$Component7) {
+  _inherits(Penguin, _React$Component7);
 
   function Penguin() {
     _classCallCheck(this, Penguin);
@@ -1097,8 +1183,8 @@ var Penguin = function (_React$Component6) {
   return Penguin;
 }(_react2.default.Component);
 
-var Fly = function (_React$Component7) {
-  _inherits(Fly, _React$Component7);
+var Fly = function (_React$Component8) {
+  _inherits(Fly, _React$Component8);
 
   function Fly() {
     _classCallCheck(this, Fly);
@@ -1116,8 +1202,8 @@ var Fly = function (_React$Component7) {
   return Fly;
 }(_react2.default.Component);
 
-var Bee = function (_React$Component8) {
-  _inherits(Bee, _React$Component8);
+var Bee = function (_React$Component9) {
+  _inherits(Bee, _React$Component9);
 
   function Bee() {
     _classCallCheck(this, Bee);
@@ -1135,20 +1221,20 @@ var Bee = function (_React$Component8) {
   return Bee;
 }(_react2.default.Component);
 
-var Dice = function (_React$Component9) {
-  _inherits(Dice, _React$Component9);
+var Dice = function (_React$Component10) {
+  _inherits(Dice, _React$Component10);
 
   function Dice(props) {
     _classCallCheck(this, Dice);
 
-    var _this9 = _possibleConstructorReturn(this, (Dice.__proto__ || Object.getPrototypeOf(Dice)).call(this, props));
+    var _this10 = _possibleConstructorReturn(this, (Dice.__proto__ || Object.getPrototypeOf(Dice)).call(this, props));
 
-    _this9.state = {
+    _this10.state = {
       state: STATE_PICK,
       max: 4,
       type: 0
     };
-    return _this9;
+    return _this10;
   }
 
   _createClass(Dice, [{
@@ -1214,8 +1300,8 @@ var Dice = function (_React$Component9) {
     key: "pick",
     value: function pick(max) {
       var number = Math.floor(Math.random() * max) + 1;
-      var type = Math.floor(Math.random() * TYPE_COUNT);
-      // const type = 1
+      // const type = Math.floor(Math.random() * TYPE_COUNT)
+      var type = 1;
       this.setState({
         state: STATE_ANIMATE,
         number: number,

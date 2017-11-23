@@ -22,12 +22,141 @@ class Meerkat extends React.Component {
   }
 }
 
-class Bird extends React.Component {
+class BirdItem extends React.Component {
   render() {
     return (
-      <div className="scene bird" onClick={ this.props.reset }>
+      <div style={this.props.style} className="bird">
+        <div className="beak"></div>
+        <div className="body-top"></div>
+        <div className="body-bottom"></div>
+        <div className="tail"></div>
+        <div className="wing-right">
+          <div className="part1"></div>
+          <div className="part2"></div>
+        </div>
+        <div className="wing-left">
+          <div className="part1"></div>
+          <div className="part2"></div>
+        </div>
       </div>
     )
+  }
+}
+
+class Loris extends React.Component {
+  render() {
+    return (
+			<div id="lori_body">
+
+				<div id="right_hand">
+					<div class="finger1 on"></div>
+					<div class="finger2 on"></div>
+					<div class="finger3 on"></div>
+					<div class="finger4 on"></div>
+					<div id="paw_print"></div>
+				</div>
+
+				<div id="paw_print">
+					<div id="fingers"></div>
+				</div>
+				<div id="left_hand">
+				</div>
+
+				<div id="right_leg">
+					<div id="paw_print">
+						<div id="fingers"></div>
+					</div>
+				</div>
+
+				<div id="left_leg">
+					<div id="paw_print">
+						<div id="fingers"></div>
+					</div>
+				</div>
+
+				<div id="left_ear"></div>
+				<div id="right_ear"></div>
+
+				<div id="head_under"></div>
+
+				<div id="head">
+					<div id="nose"></div>
+
+					<div id="left_eye_background">
+						<div id="gradient"></div>
+						<div id="left_eye" align="center">
+							<div id="cloud_holder">
+								<div id="radial"></div>
+								<div class="cloud"></div>
+							</div>
+							<div id="pupil_glimps2"></div>
+							<div id="pupil_glimps"></div>
+							<div id="pupil"></div>
+						</div>
+					</div>
+
+					<div id="right_eye_background">
+						<div id="right_eye" align="center">
+							<div id="cloud_holder">
+								<div id="radial"></div>
+								<div class="cloud"></div>
+							</div>
+							<div id="pupil_glimps2"></div>
+							<div id="pupil_glimps"></div>
+							<div id="pupil"></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+    )
+  }
+}
+
+
+class Bird extends React.Component {
+  render() {
+    const count = this.props.number
+    switch(count) {
+      case 1:
+        return (
+          <div className="scene bird" onClick={ this.props.reset }>
+            <div className="birds">
+              <BirdItem />
+            </div>
+          </div>
+        )
+      case 2:
+        return (
+          <div className="scene bird" onClick={ this.props.reset }>
+            <div className="birds">
+              <BirdItem />
+              <BirdItem style={{top: '41px', left: '66px'}} />
+            </div>
+          </div>
+        )
+      case 3:
+        return (
+          <div className="scene bird" onClick={ this.props.reset }>
+            <div className="birds">
+              <BirdItem />
+              <BirdItem style={{top: '41px', left: '66px'}} />
+              <BirdItem style={{top: '61px', left: '-41px'}} />
+            </div>
+          </div>
+        )
+      case 4:
+        return (
+          <div className="scene bird" onClick={ this.props.reset }>
+            <div className="birds">
+              <BirdItem />
+              <BirdItem style={{top: '41px', left: '66px'}} />
+              <BirdItem style={{top: '61px', left: '-41px'}} />
+              <BirdItem style={{top: '93px', left: '133px'}} />
+            </div>
+          </div>
+        )
+    }
   }
 }
 
@@ -146,8 +275,8 @@ class Dice extends React.Component {
 
   pick(max) {
     const number = Math.floor(Math.random() * max) + 1;
-    const type = Math.floor(Math.random() * TYPE_COUNT)
-    // const type = 1
+    // const type = Math.floor(Math.random() * TYPE_COUNT)
+    const type = 1
     this.setState({
       state: STATE_ANIMATE,
       number,

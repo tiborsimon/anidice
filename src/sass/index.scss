@@ -26,6 +26,7 @@ body {
   display: block;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .meerkat {
@@ -34,8 +35,138 @@ body {
 }
 
 .bird {
-  background: lightskyblue;
+  background: dodgerblue;
+  .birds {
+    width: 120px;
+    height: 60px;
+    position: relative;
+    transform: rotate(-32deg);
+    top: 50%;
+    bottom: 50%;
+    animation: bird-animation 8s linear 1 forwards;
+    .bird {
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 74px;
+      height: 46px;
+      position: absolute;
+      .beak {
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 15px solid white;
+        position: absolute;
+        top: 0px;
+      }
+      .body-top {
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-bottom: 15px solid white;
+        position: absolute;
+        top: 8px;
+      }
+      .body-bottom {
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 21px solid white;
+        position: absolute;
+        top: 23px;
+      }
+      .tail {
+        width: 0;
+        height: 0;
+        border-left: 11px solid transparent;
+        border-right: 11px solid transparent;
+        border-bottom: 10px solid white;
+        position: absolute;
+        top: 35px;
+      }
+      .wing-right {
+        position: relative;
+        top: -27px;
+        left: -24px;
+        animation: bird-right-wing-animation 0.3s linear infinite alternate;
+        .part1 {
+          width: 0;
+          height: 0;
+          border-left: 0px solid transparent;
+          border-right: 28px solid transparent;
+          border-top: 12px solid white;
+          position: absolute;
+          top: 19px;
+          left: 22px;
+          transform: rotate(-21deg);
+        }
+        .part2 {
+          width: 0;
+          height: 0;
+          border-top: 24px solid white;
+          border-left: 13px solid transparent;
+          position: absolute;
+          top: 15px;
+          left: 43px;
+          transform: rotate(-42deg);
+        }
+      }
+      .wing-left {
+        position: relative;
+        top: -27px;
+        right: -24px;
+        animation: bird-left-wing-animation 0.3s linear infinite alternate;
+        .part1 {
+          width: 0;
+          height: 0;
+          border-right: 0px solid transparent;
+          border-left: 28px solid transparent;
+          border-top: 12px solid white;
+          position: absolute;
+          top: 19px;
+          right: 22px;
+          transform: rotate(21deg);
+        }
+        .part2 {
+          width: 0;
+          height: 0;
+          border-top: 24px solid white;
+          border-right: 13px solid transparent;
+          position: absolute;
+          top: 15px;
+          right: 43px;
+          transform: rotate(42deg);
+        }
+      }
+    }
+  }
+}
 
+@keyframes bird-right-wing-animation {
+  to {
+    transform: rotate(4deg)
+  }
+}
+
+@keyframes bird-left-wing-animation {
+  to {
+    transform: rotate(-4deg)
+  }
+}
+
+@keyframes bird-animation {
+  from {
+    top: 100%;
+    left: 100%;
+  }
+  to {
+    top: -20%;
+    left: -20%;
+  }
 }
 
 .duck {
