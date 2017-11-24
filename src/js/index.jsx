@@ -144,9 +144,9 @@ class Dice extends React.Component {
     let state = this.state.state
     if (state == STATE_PICK) {
       return (
-        <div>
-          <button onClick={ this.pickThree.bind(this) }>3</button>
-          <button onClick={ this.pickFour.bind(this) }>4</button>
+        <div className="selectButtons">
+          <a className="selectButton" onClick={ this.pickThree.bind(this) }>3</a>
+          <a className="selectButton" onClick={ this.pickFour.bind(this) }>4</a>
         </div>
       )
     } else {

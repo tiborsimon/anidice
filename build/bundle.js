@@ -1147,15 +1147,15 @@ var Dice = function (_React$Component3) {
       if (state == STATE_PICK) {
         return _react2.default.createElement(
           "div",
-          null,
+          { className: "selectButtons" },
           _react2.default.createElement(
-            "button",
-            { onClick: this.pickThree.bind(this) },
+            "a",
+            { className: "selectButton", onClick: this.pickThree.bind(this) },
             "3"
           ),
           _react2.default.createElement(
-            "button",
-            { onClick: this.pickFour.bind(this) },
+            "a",
+            { className: "selectButton", onClick: this.pickFour.bind(this) },
             "4"
           )
         );
