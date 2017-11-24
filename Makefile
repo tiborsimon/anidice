@@ -59,7 +59,8 @@ prod: clean css
 	@yarn run prod
 	@echo "$(OK) Bundle built"
 
-publish: build
+publish: prod
+	@cd build; sed -i.bak '/<style>/ r site.min.css' index.html
 	mkdir -p docs
 	touch docs/.nojekyll
 	cp build/index.html docs/index.html

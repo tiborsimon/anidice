@@ -91,31 +91,31 @@ body {
 
 @keyframes right_hand {
   0%, 100% {
-    transform: rotate(-46deg);
+    transform: rotate(-46deg) translateZ(0);
   }
 
   50% {
-    transform: rotate(-48deg);
+    transform: rotate(-48deg) translateZ(0);
   }
 }
 
 @keyframes right_ear_ani {
   0%, 100% {
-    transform: rotate(16deg);
+    transform: rotate(16deg) translateZ(0);
   }
 
   50% {
-    transform: rotate(24deg);
+    transform: rotate(24deg) translateZ(0);
   }
 }
 
 @keyframes left_ear_ani {
   0%, 100% {
-    transform: rotate(-16deg);
+    transform: rotate(-16deg) translateZ(0);
   }
 
   50% {
-    transform: rotate(-24deg);
+    transform: rotate(-24deg) translateZ(0);
   }
 }
 
@@ -135,7 +135,7 @@ h1 {
 }
 
 div#lori_body {
-  transform: scale(.39) rotate(-9deg);
+  transform: scale(.39) rotate(-9deg) translateZ(0);
   position: relative;
   top: -280px;
   left: -75px;
